@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "nodeestudos",
+    "host": "postgres-db",
+    "dialect": "postgres",
+    "port": 5432
+  }
+}
