@@ -36,6 +36,15 @@ const User = connectDB.define("users", {
       },
     }
   },
+  password: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: {
+        msg: "Campo obrigatório.",
+      },
+    }
+  },
   createdAt: {
     type: Sequelize.DATE,
     allowNull: false,

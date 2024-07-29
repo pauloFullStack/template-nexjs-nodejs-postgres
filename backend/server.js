@@ -57,7 +57,7 @@ app.use(cors());
 // Set static folder - Checks every static file that is in the url, html, css, javascript, image
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/users', users);
+app.use('/api/user', users);
 
 app.use(errorHandler);
 

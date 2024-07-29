@@ -1,7 +1,5 @@
 const asyncHandler = require("../middleware/async");
-const { getUsers } = require("../services/users");
-const { create } = require("../services/users");
-
+const { getUsers, create, login } = require("../services/users");
 
 exports.getUsers = asyncHandler(async (req, res, next) =>
   res.status(200).json(await getUsers())
@@ -9,4 +7,8 @@ exports.getUsers = asyncHandler(async (req, res, next) =>
 
 exports.create = asyncHandler(async (req, res, next) =>
   res.status(200).json(await create(req.body))
+);
+
+exports.login = asyncHandler(async (req, res, next) =>
+  res.status(200).json(await login(req.body))
 );
