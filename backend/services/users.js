@@ -37,6 +37,7 @@ exports.login = asyncHandler(async (data) => {
     };
 
     const token = jwt.sign(payload, process.env.JWT_SECRET, options);
+    // Passar para o GITFLOW
     // Fazer a parte que verifica esta autenticado ou não é no middleware auth.js, chamar ele quando estiver na rota , e ver como fazer da forma correta la no frontend
     return {
       success: true,
